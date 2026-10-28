@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {catalog,loadQuestions,filterQuestions} from '../dist/js/question-loader.js';
+import {validateQuestion} from '../dist/js/question-validator.js';
+import {createSession,recordAnswer,score,statistics} from '../dist/js/quiz-engine.js';
+import {defaults,validateData} from '../dist/js/storage.js';
+import {highlight} from '../dist/js/code-renderer.js';
+const questions=await loadQuestions();
+const config={bank:'all',topics:[],difficulty:'Mixed',length:3,format:'all',pool:'all',timed:false,shuffleQuestions:false,shuffleAnswers:false};
+test('all banks validate, IDs are unique and catalog counts are exact',()=>{assert.equal(questions.length,119);assert.equal(new Set(questions.map(q=>q.id)).size,119);for(const c of catalog){const qs=questions.filter(q=>q.language===c.id);assert.equal(qs.length,c.count);assert.deepEqual([...new Set(qs.map(q=>q.format))].sort(),c.formats)}});
+test('answer is recorded once per session, repeats increment attempts but not unique count',()=>{const st=defaults(),q=questions[0];let s=createSession([q],{...config,length:1});assert.equal(recordAnswer(st,s,q,q.answers),true);assert.equal(recordAnswer(st,s,q,q.answers),false);s=createSession([q],{...config,length:1});const wrong=q.options.find(o=>!q.answers.includes(o.id)).id;recordAnswer(st,s,q,[wrong]);const stats=statistics(st);assert.equal(stats.attempts,2);assert.equal(stats.unique,1);assert.equal(stats.correct,1);assert.equal(stats.incorrect,1);assert.equal(filterQuestions([q],{pool:'incorrect'},st.questions).length,1)});
+test('multiple-answer grading requires exact selection',()=>{const st=defaults(),q=questions.find(q=>q.format==='multiple'),s=createSession([q],{...config,length:1});recordAnswer(st,s,q,[q.answers[0]]);assert.equal(s.responses[q.id].correct,false)});
+test('results distinguish incorrect from unanswered',()=>{const st=defaults(),s=createSession(questions,config);recordAnswer(st,s,questions[0],questions[0].answers);assert.deepEqual(score(s),{total:3,correct:1,incorrect:0,unanswered:2,score:33,accuracy:100})});
+test('configuration combines topics, difficulty, format and attempt pool',()=>{const r=filterQuestions(questions,{topics:['Async'],difficulty:'Medium',format:'output',pool:'new'},{});assert.equal(r.length,1);assert.equal(r[0].id,'javascript-003')});
+test('duplicate questions and invalid answer references fail validation',()=>{assert.throws(()=>validateQuestion(questions[0],new Set([questions[0].id])));assert.throws(()=>validateQuestion({...questions[0],answers:['z']}))});
+test('backup round trip retains a resumable session',()=>{const st=defaults();st.session=createSession(questions,config);recordAnswer(st,st.session,questions[0],questions[0].answers);assert.deepEqual(validateData(JSON.parse(JSON.stringify(st)),new Set(questions.map(q=>q.id))),st)});
+test('malformed backups and unknown question IDs are rejected',()=>{assert.throws(()=>validateData({version:1}));const st=defaults();st.bookmarks=['unknown'];assert.throws(()=>validateData(st,new Set(questions.map(q=>q.id))));const st2=defaults();st2.settings.codeSize=999;assert.throws(()=>validateData(st2))});
+test('syntax renderer escapes hostile markup without executing it',()=>{const rendered=highlight('<img src=x onerror="alert(1)">');assert.ok(!rendered.includes('<img'));assert.ok(rendered.includes('&lt;img'));assert.ok(highlight('const x = "<script>";').includes('&lt;script&gt;'))});
