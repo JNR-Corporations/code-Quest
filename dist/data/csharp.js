@@ -1,138 +1,15 @@
-export default [
-  {
-    "id": "csharp-001",
-    "language": "csharp",
-    "topic": "Async",
-    "difficulty": "Medium",
-    "format": "concept",
-    "question": "What does await do when a Task has not completed?",
-    "code": "",
-    "options": [
-      {
-        "id": "a",
-        "text": "Always blocks the thread"
-      },
-      {
-        "id": "b",
-        "text": "Suspends the async method"
-      },
-      {
-        "id": "c",
-        "text": "Creates a new process"
-      },
-      {
-        "id": "d",
-        "text": "Ignores errors"
-      }
-    ],
-    "answers": [
-      "b"
-    ],
-    "explanation": "await suspends the method and arranges continuation after completion. It does not inherently block the current thread.",
-    "tags": [
-      "Async",
-      "csharp"
-    ],
-    "hint": "Consider the rules of async before choosing."
-  },
-  {
-    "id": "csharp-002",
-    "language": "csharp",
-    "topic": "Types",
-    "difficulty": "Easy",
-    "format": "concept",
-    "question": "Which is a value type?",
-    "code": "",
-    "options": [
-      {
-        "id": "a",
-        "text": "class"
-      },
-      {
-        "id": "b",
-        "text": "interface"
-      },
-      {
-        "id": "c",
-        "text": "struct"
-      },
-      {
-        "id": "d",
-        "text": "delegate"
-      }
-    ],
-    "answers": [
-      "c"
-    ],
-    "explanation": "Struct types are value types. Classes, interfaces and delegates are reference types.",
-    "tags": [
-      "Types",
-      "csharp"
-    ],
-    "hint": "Consider the rules of types before choosing."
-  },
-  {
-    "id": "csharp-003",
-    "language": "csharp",
-    "topic": "Null safety",
-    "difficulty": "Easy",
-    "format": "output",
-    "question": "What is printed?",
-    "code": "string? name = null;\nConsole.WriteLine(name?.Length ?? 0);",
-    "options": [
-      {
-        "id": "a",
-        "text": "null"
-      },
-      {
-        "id": "b",
-        "text": "0"
-      },
-      {
-        "id": "c",
-        "text": "Exception"
-      },
-      {
-        "id": "d",
-        "text": "1"
-      }
-    ],
-    "answers": [
-      "b"
-    ],
-    "explanation": "The null-conditional access produces null and ?? supplies the fallback.",
-    "tags": [
-      "Null safety",
-      "csharp"
-    ],
-    "hint": "Consider the rules of null safety before choosing."
-  },
-  {
-    "id": "csharp-004",
-    "language": "csharp",
-    "topic": "Resources",
-    "difficulty": "Easy",
-    "format": "boolean",
-    "question": "A using statement can ensure IDisposable cleanup.",
-    "code": "",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "answers": [
-      "a"
-    ],
-    "explanation": "using arranges Dispose on leaving scope, including through an exception.",
-    "tags": [
-      "Resources",
-      "csharp"
-    ],
-    "hint": "Consider the rules of resources before choosing."
-  }
-];
+import topic0 from './topics/csharp/async.js';
+import topic1 from './topics/csharp/types.js';
+import topic2 from './topics/csharp/null-safety.js';
+import topic3 from './topics/csharp/resources.js';
+import topic4 from './topics/csharp/variables.js';
+import topic5 from './topics/csharp/printing.js';
+import topic6 from './topics/csharp/operators.js';
+import topic7 from './topics/csharp/comments.js';
+import topic8 from './topics/csharp/functions.js';
+import topic9 from './topics/csharp/collections.js';
+import topic10 from './topics/csharp/conditionals.js';
+import topic11 from './topics/csharp/loops.js';
+import topic12 from './topics/csharp/strings.js';
+import topic13 from './topics/csharp/debugging-basics.js';
+export default [...topic0,...topic1,...topic2,...topic3,...topic4,...topic5,...topic6,...topic7,...topic8,...topic9,...topic10,...topic11,...topic12,...topic13];

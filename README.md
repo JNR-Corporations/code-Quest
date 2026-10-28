@@ -1,6 +1,6 @@
 # CodeQuest
 
-An Android-first programming practice app built with HTML5, CSS3 and vanilla JavaScript. No build step, accounts, analytics or backend user database. Includes **119 authored questions in 23 separate question banks**. Collection counts reflect actual available questions; this is a compact starting library, not an exhaustive exam syllabus.
+An Android-first programming practice app built with HTML5, CSS3 and vanilla JavaScript. No build step, accounts, analytics or backend user database. Includes **467 authored questions in 26 separate question banks**. Collection counts reflect actual available questions; this is a compact starting library, not an exhaustive exam syllabus.
 
 ## Run locally
 
@@ -72,3 +72,16 @@ Update the pack’s count, topics, difficulties and formats in `catalog.js`, add
 ## Reliability and limitations
 
 Browser/site data clearing removes local progress. Private browsing, quota limits and device policies can prevent storage; the UI reports write failures and uses localStorage backup if IndexedDB fails. One active tab per device is recommended: simultaneous tabs are not a collaborative editor and can overwrite local state. JSON backups should be kept outside the browser. This app does not execute code, implement cloud sync, or include gamification. Keyboard controls use native buttons/forms with visible focus. Reduced motion is supported. Browser/mobile-emulation QA is separate from actual Android-device testing.
+
+
+## Version 2 additions
+
+467 questions across 26 collections, including Lua, Scala and R. Language question banks aggregate 285 separate topic modules under `dist/data/topics/<collection>/<topic>.js`; original question IDs remain unchanged. The beginner paths screen groups topics by language, presents a source example, shows real per-topic attempt progress, and opens configuration with that topic selected.
+
+All selects use searchable application pickers backed by the original form controls. Destructive actions and session replacement use accessible in-app dialogs with Escape/cancel and focus restoration. Appearance adds a light palette and more accent options. Browser-native installation and download permissions remain browser-managed.
+
+### Vercel
+Import the repository with Root Directory left at the repository root. The included `vercel.json` selects the Other framework, skips building and serves `dist`. If the repository wraps everything in a `CodeQuest` folder, select `CodeQuest` as Root Directory. Alternatively deploy only dist with Other and Output Directory `.`.
+
+### Local preview
+From CodeQuest, run `python3 -m http.server 8080 --directory dist` and open http://localhost:8080. Opening index.html directly with file:// cannot load the ES modules.

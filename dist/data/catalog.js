@@ -6,7 +6,7 @@ export const catalog = [
     "color": "#dfc96b",
     "description": "The language of the web",
     "group": "Languages",
-    "count": 13,
+    "count": 33,
     "difficulties": [
       "Easy",
       "Medium",
@@ -17,6 +17,7 @@ export const catalog = [
       "bug",
       "comparison",
       "complete",
+      "concept",
       "debug",
       "interview",
       "mcq",
@@ -24,18 +25,27 @@ export const catalog = [
       "output"
     ],
     "topics": [
-      "Arrays",
-      "Async",
+      "Scope",
       "Closures",
-      "Coercion",
-      "Debugging",
+      "Async",
+      "Arrays",
       "Equality",
-      "Functions",
-      "Fundamentals",
-      "Memory",
+      "Debugging",
       "Objects",
+      "Functions",
+      "Memory",
       "Prototypes",
-      "Scope"
+      "Coercion",
+      "Fundamentals",
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -45,7 +55,7 @@ export const catalog = [
     "color": "#83b7dc",
     "description": "Readable by design",
     "group": "Languages",
-    "count": 6,
+    "count": 26,
     "difficulties": [
       "Easy",
       "Medium"
@@ -59,11 +69,19 @@ export const catalog = [
     ],
     "topics": [
       "Collections",
+      "Functions",
       "Comprehensions",
+      "Iterators",
       "Equality",
       "Exceptions",
-      "Functions",
-      "Iterators"
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -73,20 +91,30 @@ export const catalog = [
     "color": "#d7987e",
     "description": "Objects, types & the JVM",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy",
       "Medium"
     ],
     "formats": [
       "boolean",
-      "concept"
+      "concept",
+      "output"
     ],
     "topics": [
-      "Collections",
       "Equality",
+      "Collections",
+      "OOP",
       "Exceptions",
-      "OOP"
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -96,7 +124,7 @@ export const catalog = [
     "color": "#9aabdf",
     "description": "Control meets abstraction",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy",
       "Medium",
@@ -108,10 +136,20 @@ export const catalog = [
       "output"
     ],
     "topics": [
-      "Concurrency",
       "Ownership",
       "RAII",
-      "References"
+      "References",
+      "Concurrency",
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -121,7 +159,7 @@ export const catalog = [
     "color": "#93a9c2",
     "description": "Close to the machine",
     "group": "Languages",
-    "count": 4,
+    "count": 32,
     "difficulties": [
       "Easy",
       "Expert"
@@ -132,10 +170,24 @@ export const catalog = [
       "output"
     ],
     "topics": [
-      "Arrays",
-      "Memory",
       "Pointers",
-      "Undefined behavior"
+      "Memory",
+      "Arrays",
+      "Undefined behavior",
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics",
+      "Input",
+      "Data types",
+      "Memory allocation",
+      "Structures"
     ]
   },
   {
@@ -145,7 +197,7 @@ export const catalog = [
     "color": "#79a7d9",
     "description": "JavaScript, with confidence",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy",
       "Medium"
@@ -153,13 +205,24 @@ export const catalog = [
     "formats": [
       "boolean",
       "complete",
-      "concept"
+      "concept",
+      "output"
     ],
     "topics": [
-      "Generics",
+      "Types",
       "Narrowing",
+      "Generics",
       "Runtime",
-      "Types"
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -169,7 +232,7 @@ export const catalog = [
     "color": "#bd97e0",
     "description": "Concise. Safe. Expressive.",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy",
       "Medium"
@@ -181,10 +244,20 @@ export const catalog = [
       "syntax"
     ],
     "topics": [
+      "Null safety",
       "Coroutines",
       "Immutability",
-      "Null safety",
-      "Syntax"
+      "Syntax",
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -194,7 +267,7 @@ export const catalog = [
     "color": "#df9b7c",
     "description": "Modern Apple development",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy",
       "Medium"
@@ -206,10 +279,19 @@ export const catalog = [
       "syntax"
     ],
     "topics": [
-      "Collections",
-      "Memory",
       "Optionals",
-      "Value types"
+      "Value types",
+      "Memory",
+      "Collections",
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -219,7 +301,7 @@ export const catalog = [
     "color": "#80c2ca",
     "description": "Simple, concurrent systems",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy",
       "Medium"
@@ -230,10 +312,20 @@ export const catalog = [
       "output"
     ],
     "topics": [
+      "Errors",
       "Concurrency",
       "Defer",
-      "Errors",
-      "Maps"
+      "Maps",
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -243,20 +335,31 @@ export const catalog = [
     "color": "#c89b88",
     "description": "Safety without compromise",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy",
       "Hard"
     ],
     "formats": [
       "boolean",
-      "concept"
+      "concept",
+      "output"
     ],
     "topics": [
+      "Ownership",
       "Borrowing",
       "Errors",
       "Lifetimes",
-      "Ownership"
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -266,7 +369,7 @@ export const catalog = [
     "color": "#b59bdc",
     "description": "The .NET ecosystem",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy",
       "Medium"
@@ -278,9 +381,19 @@ export const catalog = [
     ],
     "topics": [
       "Async",
+      "Types",
       "Null safety",
       "Resources",
-      "Types"
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -290,7 +403,7 @@ export const catalog = [
     "color": "#83bfd0",
     "description": "Build across platforms",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy"
     ],
@@ -300,10 +413,18 @@ export const catalog = [
       "syntax"
     ],
     "topics": [
-      "Async",
-      "Collections",
       "Null safety",
-      "Variables"
+      "Async",
+      "Variables",
+      "Collections",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -313,7 +434,7 @@ export const catalog = [
     "color": "#a7a3d0",
     "description": "Server-side foundations",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy",
       "Medium"
@@ -325,10 +446,20 @@ export const catalog = [
       "syntax"
     ],
     "topics": [
-      "Arrays",
       "Equality",
+      "Arrays",
       "Security",
-      "Syntax"
+      "Syntax",
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -338,7 +469,7 @@ export const catalog = [
     "color": "#d38d9c",
     "description": "Expressive by nature",
     "group": "Languages",
-    "count": 4,
+    "count": 24,
     "difficulties": [
       "Easy"
     ],
@@ -350,9 +481,19 @@ export const catalog = [
     ],
     "topics": [
       "Blocks",
-      "OOP",
+      "Truthiness",
       "Symbols",
-      "Truthiness"
+      "OOP",
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
     ]
   },
   {
@@ -373,12 +514,12 @@ export const catalog = [
       "syntax"
     ],
     "topics": [
-      "Aggregates",
       "Filtering",
-      "Indexes",
-      "Joins",
       "NULL",
-      "Transactions"
+      "Joins",
+      "Aggregates",
+      "Transactions",
+      "Indexes"
     ]
   },
   {
@@ -398,10 +539,10 @@ export const catalog = [
       "syntax"
     ],
     "topics": [
+      "Semantics",
       "Accessibility",
       "Forms",
-      "Media",
-      "Semantics"
+      "Media"
     ]
   },
   {
@@ -421,10 +562,10 @@ export const catalog = [
       "syntax"
     ],
     "topics": [
-      "Accessibility",
       "Box model",
       "Layout",
-      "Responsive design"
+      "Responsive design",
+      "Accessibility"
     ]
   },
   {
@@ -443,12 +584,12 @@ export const catalog = [
       "multiple"
     ],
     "topics": [
-      "Accessibility",
-      "Browser APIs",
       "DOM",
+      "Browser APIs",
       "HTTP",
       "Networking",
-      "Performance"
+      "Performance",
+      "Accessibility"
     ]
   },
   {
@@ -469,10 +610,10 @@ export const catalog = [
     ],
     "topics": [
       "Big-O",
-      "Complexity",
+      "Sorting",
       "Graphs",
       "Recursion",
-      "Sorting"
+      "Complexity"
     ]
   },
   {
@@ -492,9 +633,9 @@ export const catalog = [
       "concept"
     ],
     "topics": [
-      "Hash tables",
-      "Queues",
       "Stacks",
+      "Queues",
+      "Hash tables",
       "Trees"
     ]
   },
@@ -517,14 +658,14 @@ export const catalog = [
       "multiple"
     ],
     "topics": [
+      "OOP",
+      "Functional programming",
+      "Operating systems",
+      "Memory management",
+      "Concurrency",
       "Compiler fundamentals",
       "Computer networks",
-      "Concurrency",
-      "Databases",
-      "Functional programming",
-      "Memory management",
-      "OOP",
-      "Operating systems"
+      "Databases"
     ]
   },
   {
@@ -545,14 +686,14 @@ export const catalog = [
     ],
     "topics": [
       "Architecture",
+      "Lifecycle",
+      "Jetpack Compose",
       "Coroutines",
       "Intents",
-      "Jetpack Compose",
-      "Lifecycle",
       "Navigation",
-      "Performance",
+      "Storage",
       "Permissions",
-      "Storage"
+      "Performance"
     ]
   },
   {
@@ -574,12 +715,96 @@ export const catalog = [
       "syntax"
     ],
     "topics": [
-      "Code quality",
-      "Debugging",
-      "Design patterns",
       "Git",
-      "Interviews",
-      "Testing"
+      "Debugging",
+      "Testing",
+      "Code quality",
+      "Design patterns",
+      "Interviews"
+    ]
+  },
+  {
+    "id": "lua",
+    "title": "Lua",
+    "symbol": "Lua",
+    "color": "#83b6eb",
+    "description": "From first principles to confident practice",
+    "group": "Languages",
+    "count": 20,
+    "topics": [
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
+    ],
+    "formats": [
+      "concept",
+      "output"
+    ],
+    "difficulties": [
+      "Easy"
+    ]
+  },
+  {
+    "id": "scala",
+    "title": "Scala",
+    "symbol": "Sc",
+    "color": "#dc8b93",
+    "description": "From first principles to confident practice",
+    "group": "Languages",
+    "count": 20,
+    "topics": [
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
+    ],
+    "formats": [
+      "concept",
+      "output"
+    ],
+    "difficulties": [
+      "Easy"
+    ]
+  },
+  {
+    "id": "r",
+    "title": "R",
+    "symbol": "R",
+    "color": "#91b5dc",
+    "description": "From first principles to confident practice",
+    "group": "Languages",
+    "count": 20,
+    "topics": [
+      "Variables",
+      "Printing",
+      "Operators",
+      "Comments",
+      "Functions",
+      "Collections",
+      "Conditionals",
+      "Loops",
+      "Strings",
+      "Debugging basics"
+    ],
+    "formats": [
+      "concept",
+      "output"
+    ],
+    "difficulties": [
+      "Easy"
     ]
   }
 ];

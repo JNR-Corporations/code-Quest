@@ -3,7 +3,7 @@ export const defaults=()=>({version:1,questions:{},bookmarks:[],history:[],sessi
 const plain=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const strings=a=>Array.isArray(a)&&a.every(v=>typeof v==='string'&&v.length<150);
 const number=n=>Number.isSafeInteger(n)&&n>=0;
-const validSettings=s=>plain(s)&&['dark','dim'].includes(s.theme)&&/^#[0-9a-f]{6}$/i.test(s.accent)&&s.codeSize>=11&&s.codeSize<=20&&s.textSize>=12&&s.textSize<=18&&number(s.length)&&s.length>=1&&s.length<=100&&['Mixed','Easy','Medium','Hard','Expert'].includes(s.difficulty)&&['lineNumbers','sound','reducedMotion'].every(k=>typeof s[k]==='boolean');
+const validSettings=s=>plain(s)&&['dark','dim','light'].includes(s.theme)&&/^#[0-9a-f]{6}$/i.test(s.accent)&&s.codeSize>=11&&s.codeSize<=20&&s.textSize>=12&&s.textSize<=18&&number(s.length)&&s.length>=1&&s.length<=100&&['Mixed','Easy','Medium','Hard','Expert'].includes(s.difficulty)&&['lineNumbers','sound','reducedMotion'].every(k=>typeof s[k]==='boolean');
 export function validateData(d,knownIds){
  if(!plain(d)||d.version!==1||!plain(d.questions)||!strings(d.bookmarks)||!strings(d.recent)||!Array.isArray(d.history)||!Array.isArray(d.configs)||!validSettings(d.settings))throw new Error('This is not a valid CodeQuest v1 export.');
  const idOK=id=>typeof id==='string'&&(!knownIds||knownIds.has(id));

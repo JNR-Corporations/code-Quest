@@ -1,138 +1,15 @@
-export default [
-  {
-    "id": "cpp-001",
-    "language": "cpp",
-    "topic": "Ownership",
-    "difficulty": "Medium",
-    "format": "concept",
-    "question": "Which type represents exclusive ownership?",
-    "code": "",
-    "options": [
-      {
-        "id": "a",
-        "text": "std::shared_ptr"
-      },
-      {
-        "id": "b",
-        "text": "std::unique_ptr"
-      },
-      {
-        "id": "c",
-        "text": "A raw pointer always"
-      },
-      {
-        "id": "d",
-        "text": "std::weak_ptr"
-      }
-    ],
-    "answers": [
-      "b"
-    ],
-    "explanation": "unique_ptr owns its managed object exclusively and destroys it on scope exit. Ownership can be moved.",
-    "tags": [
-      "Ownership",
-      "cpp"
-    ],
-    "hint": "Consider the rules of ownership before choosing."
-  },
-  {
-    "id": "cpp-002",
-    "language": "cpp",
-    "topic": "RAII",
-    "difficulty": "Easy",
-    "format": "concept",
-    "question": "What is the core idea of RAII?",
-    "code": "",
-    "options": [
-      {
-        "id": "a",
-        "text": "Acquire resources only globally"
-      },
-      {
-        "id": "b",
-        "text": "Tie resource lifetime to object lifetime"
-      },
-      {
-        "id": "c",
-        "text": "Avoid all constructors"
-      },
-      {
-        "id": "d",
-        "text": "Use manual cleanup everywhere"
-      }
-    ],
-    "answers": [
-      "b"
-    ],
-    "explanation": "RAII acquires resources during initialization and releases them in destructors, enabling cleanup during normal and exceptional exits.",
-    "tags": [
-      "RAII",
-      "cpp"
-    ],
-    "hint": "Consider the rules of raii before choosing."
-  },
-  {
-    "id": "cpp-003",
-    "language": "cpp",
-    "topic": "References",
-    "difficulty": "Easy",
-    "format": "output",
-    "question": "What is printed?",
-    "code": "int n = 2;\nint &r = n;\nr = 5;\nstd::cout << n;",
-    "options": [
-      {
-        "id": "a",
-        "text": "2"
-      },
-      {
-        "id": "b",
-        "text": "5"
-      },
-      {
-        "id": "c",
-        "text": "0"
-      },
-      {
-        "id": "d",
-        "text": "An address"
-      }
-    ],
-    "answers": [
-      "b"
-    ],
-    "explanation": "r is an lvalue reference to n. Assigning through r changes n.",
-    "tags": [
-      "References",
-      "cpp"
-    ],
-    "hint": "Consider the rules of references before choosing."
-  },
-  {
-    "id": "cpp-004",
-    "language": "cpp",
-    "topic": "Concurrency",
-    "difficulty": "Hard",
-    "format": "boolean",
-    "question": "Unsynchronized conflicting access from threads can cause a data race.",
-    "code": "",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "answers": [
-      "a"
-    ],
-    "explanation": "When conflicting memory operations are not ordered and at least one is a non-atomic write, a data race yields undefined behavior.",
-    "tags": [
-      "Concurrency",
-      "cpp"
-    ],
-    "hint": "Consider the rules of concurrency before choosing."
-  }
-];
+import topic0 from './topics/cpp/ownership.js';
+import topic1 from './topics/cpp/raii.js';
+import topic2 from './topics/cpp/references.js';
+import topic3 from './topics/cpp/concurrency.js';
+import topic4 from './topics/cpp/variables.js';
+import topic5 from './topics/cpp/printing.js';
+import topic6 from './topics/cpp/operators.js';
+import topic7 from './topics/cpp/comments.js';
+import topic8 from './topics/cpp/functions.js';
+import topic9 from './topics/cpp/collections.js';
+import topic10 from './topics/cpp/conditionals.js';
+import topic11 from './topics/cpp/loops.js';
+import topic12 from './topics/cpp/strings.js';
+import topic13 from './topics/cpp/debugging-basics.js';
+export default [...topic0,...topic1,...topic2,...topic3,...topic4,...topic5,...topic6,...topic7,...topic8,...topic9,...topic10,...topic11,...topic12,...topic13];

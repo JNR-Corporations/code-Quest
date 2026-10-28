@@ -1,0 +1,11 @@
+import topic0 from './topics/scala/variables.js';
+import topic1 from './topics/scala/printing.js';
+import topic2 from './topics/scala/operators.js';
+import topic3 from './topics/scala/comments.js';
+import topic4 from './topics/scala/functions.js';
+import topic5 from './topics/scala/collections.js';
+import topic6 from './topics/scala/conditionals.js';
+import topic7 from './topics/scala/loops.js';
+import topic8 from './topics/scala/strings.js';
+import topic9 from './topics/scala/debugging-basics.js';
+export default [...topic0,...topic1,...topic2,...topic3,...topic4,...topic5,...topic6,...topic7,...topic8,...topic9];

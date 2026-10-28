@@ -1,138 +1,15 @@
-export default [
-  {
-    "id": "ruby-001",
-    "language": "ruby",
-    "topic": "Blocks",
-    "difficulty": "Easy",
-    "format": "output",
-    "question": "What is returned?",
-    "code": "[1, 2, 3].map { |n| n * 2 }",
-    "options": [
-      {
-        "id": "a",
-        "text": "[1, 2, 3]"
-      },
-      {
-        "id": "b",
-        "text": "[2, 4, 6]"
-      },
-      {
-        "id": "c",
-        "text": "6"
-      },
-      {
-        "id": "d",
-        "text": "nil"
-      }
-    ],
-    "answers": [
-      "b"
-    ],
-    "explanation": "map returns an array containing each block result.",
-    "tags": [
-      "Blocks",
-      "ruby"
-    ],
-    "hint": "Consider the rules of blocks before choosing."
-  },
-  {
-    "id": "ruby-002",
-    "language": "ruby",
-    "topic": "Truthiness",
-    "difficulty": "Easy",
-    "format": "concept",
-    "question": "Which values are falsy in Ruby?",
-    "code": "",
-    "options": [
-      {
-        "id": "a",
-        "text": "Only false and nil"
-      },
-      {
-        "id": "b",
-        "text": "0 and empty string"
-      },
-      {
-        "id": "c",
-        "text": "Every empty collection"
-      },
-      {
-        "id": "d",
-        "text": "Only false"
-      }
-    ],
-    "answers": [
-      "a"
-    ],
-    "explanation": "Only false and nil are falsy. Zero and empty strings are truthy.",
-    "tags": [
-      "Truthiness",
-      "ruby"
-    ],
-    "hint": "Consider the rules of truthiness before choosing."
-  },
-  {
-    "id": "ruby-003",
-    "language": "ruby",
-    "topic": "Symbols",
-    "difficulty": "Easy",
-    "format": "syntax",
-    "question": "Which literal is a symbol?",
-    "code": "",
-    "options": [
-      {
-        "id": "a",
-        "text": "\"name\""
-      },
-      {
-        "id": "b",
-        "text": ":name"
-      },
-      {
-        "id": "c",
-        "text": "@name"
-      },
-      {
-        "id": "d",
-        "text": "$name"
-      }
-    ],
-    "answers": [
-      "b"
-    ],
-    "explanation": ":name is a symbol literal, often used as a key or identifier.",
-    "tags": [
-      "Symbols",
-      "ruby"
-    ],
-    "hint": "Consider the rules of symbols before choosing."
-  },
-  {
-    "id": "ruby-004",
-    "language": "ruby",
-    "topic": "OOP",
-    "difficulty": "Easy",
-    "format": "boolean",
-    "question": "Modules can supply methods through mixins.",
-    "code": "",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "answers": [
-      "a"
-    ],
-    "explanation": "Including a module mixes its instance methods into a class’s method lookup chain.",
-    "tags": [
-      "OOP",
-      "ruby"
-    ],
-    "hint": "Consider the rules of oop before choosing."
-  }
-];
+import topic0 from './topics/ruby/blocks.js';
+import topic1 from './topics/ruby/truthiness.js';
+import topic2 from './topics/ruby/symbols.js';
+import topic3 from './topics/ruby/oop.js';
+import topic4 from './topics/ruby/variables.js';
+import topic5 from './topics/ruby/printing.js';
+import topic6 from './topics/ruby/operators.js';
+import topic7 from './topics/ruby/comments.js';
+import topic8 from './topics/ruby/functions.js';
+import topic9 from './topics/ruby/collections.js';
+import topic10 from './topics/ruby/conditionals.js';
+import topic11 from './topics/ruby/loops.js';
+import topic12 from './topics/ruby/strings.js';
+import topic13 from './topics/ruby/debugging-basics.js';
+export default [...topic0,...topic1,...topic2,...topic3,...topic4,...topic5,...topic6,...topic7,...topic8,...topic9,...topic10,...topic11,...topic12,...topic13];
